@@ -21,7 +21,7 @@ hypercorn main:app --bind 0.0.0.0:8443 --certfile cert.pem --keyfile key.pem
 2. ### With uvicorn http 1.1
 
 ```bash
-hypercorn main:app --bind 0.0.0.0:8443 --certfile cert.pem --keyfile key.pem
+uvicorn main:app --reload --host 0.0.0.0 --port 8443 --ssl-keyfile=key.pem --ssl-certfile=cert.pem
 ```
 
 # Test perfomanse
